@@ -1,0 +1,68 @@
+<h3 [ngStyle]="{color:getColor()}"
+[ngClass]="{online: serverStatus==='Online'}"><!--CSS using ngClass-->
+    Server status is {{serverStatus}}
+</h3>
+<div class="card">
+    <div class="card-header bg-primary">
+        {{mainHeading}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                {{title}} :
+            </div>
+            <div class="col-md-4">
+                <input type="text"
+                [(ngModel)]="userText">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Number of products filtered on basis of {{userText}}: 
+                    {{(products | productSearch:userText).length}}
+                </h5>
+            </div>
+        </div>
+        <div class="table-responsive" >
+            <table class="table" *ngIf="products && products.length">
+                <thead>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-success"
+                            (click)="toggleImage()">
+                                {{shoWImage ? 'Hide Image' : 'Show Image'}}
+                            </button>
+                        </td>
+                        <th>Name</th>
+                        <th>Code</th>
+                        <th>Date</th>
+                        <th>Price</th>
+                        <th>Star Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prod of products | productSearch:userText">
+                        <!-- let prod of products; let i=index | productSearch:userText -->
+                        <td>
+                            <!-- Property or Attribute Binding -->
+                            <img [src]="prod.imageUrl" [style.width.px]="imageWidth" alt="image" *ngIf="shoWImage"/>
+                        </td>
+                        <td>{{prod.productName | myUpperText:'lower':'jilu'}}</td>
+                        <td>{{prod.productCode | myUpperText:'upper':'ji'}}</td>
+                        <td>{{prod.releaseDate | date}}</td>
+                            <!-- Conditional CSS using ngStyle -->
+                        <td [ngStyle]="{'background-color':prod.price<25?'hotpink':'skyblue'}">
+                            {{prod.price | discount | currency:'INR'}}
+                        </td>
+                        <!-- <td>{{prod.starRating}}</td> -->
+                        <td>
+                            <app-star [rating]="prod.starRating"
+                            (ratingClicked)="onDataReceive($event)"></app-star>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
