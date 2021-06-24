@@ -10,6 +10,8 @@ import { Component, OnChanges,
 })
 
 export class StarComponent implements OnChanges,OnInit{
+    //@Input, is a decorator which is required in the 
+    //child component to receive data from parent
     @Input() rating: number;
     // "ratingClicked" must be an object of EventEmitter inorder to emit data 
     //back to Parent Component
