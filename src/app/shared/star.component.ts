@@ -11,8 +11,10 @@ import { Component, OnChanges,
 
 export class StarComponent implements OnChanges,OnInit{
     //@Input, is a decorator which is required in the 
-    //child component to receive data from parent
+    //child component to receive data from parent component
     @Input() rating: number;
+    //@Output, is a decorator which is required in the child component
+    // to send data to parent component
     // "ratingClicked" must be an object of EventEmitter inorder to emit data 
     //back to Parent Component
     @Output() ratingClicked: EventEmitter<string>  = new EventEmitter<string>();
@@ -39,7 +41,6 @@ export class StarComponent implements OnChanges,OnInit{
     }
 
     onStar(){
-        //this.ratingClicked
         this.ratingClicked.emit(`The rating clicked is ${this.rating}`);
     }
 }

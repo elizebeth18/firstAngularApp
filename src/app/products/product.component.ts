@@ -22,15 +22,16 @@ export class ProductComponent implements OnInit {
     shoWImage : boolean = false;
     imageWidth : number = 100;
     serverStatus : string = "Offline";
-    products : IProduct []= [
-   ];
+    products : IProduct []= [];
 
    constructor(private productService: ProductService){
       this.serverStatus = Math.random() > 0.5 ? 'Online' : 'Offline';
    }
 
    ngOnInit() : void {
-      this.products = this.productService.getProducts();
+      this.productService.getProducts()
+          .subscribe((data) => this.products = data);
+      //this.products = 
    }
 
    toggleImage() :  void {
