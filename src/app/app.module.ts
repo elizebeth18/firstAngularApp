@@ -27,6 +27,7 @@ import { HomeComponent } from './home/home.component';
 import { OrdersComponent } from './orders/orders.component';
 import { NotFoundComponent } from './shared/notFound.component';
 import { ProductDetailComponent } from './products/product-detail.component';
+import { MusicService } from './music/music.service';
 
 //decorator (metaData)
 @NgModule({
@@ -69,7 +70,8 @@ import { ProductDetailComponent } from './products/product-detail.component';
 
   //All services will be declared here
   providers: [
-    ProductService
+    ProductService,
+    MusicService
   ]
 })
 

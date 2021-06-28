@@ -32,6 +32,27 @@
 "price": 35.95,
 "starRating": 4.3,
 "imageUrl": "https://i.ibb.co/HD3RHMW/videogame.jpg"
-}
+},
+{
+    "_id": 2,
+    "productId": 81,
+    "productName": "Muffin Hinge Container 6",
+    "productCode": "TEC5-800",
+    "releaseDate": "6/10/2021",
+    "description": "Muffin Hinge Container",
+    "price": 37,
+    "starRating": 2.7,
+    "imageUrl": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F911YhTNSHbL.jpg&imgrefurl=https%3A%2F%2Fwww.desertcart.in%2Fproducts%2F14567059-6-compartment-clear-cupcake-muffin-containers-disposable-plastic-cupcake-boxes-with-hinged-lid-12-containers-great-for-standard-size-cupcakes-and-muffins&tbnid=0Yo8i9oa7LbarM&vet=12ahUKEwipqsulkbrxAhU1iuYKHRjQAYwQMygAegUIARC9AQ..i&docid=RMD41jZ2ux0wfM&w=2560&h=1885&itg=1&q=Muffin%20Hinge%20Container&client=safari&ved=2ahUKEwipqsulkbrxAhU1iuYKHRjQAYwQMygAegUIARC9AQ"
+  }, {
+    "_id": 3,
+    "productId": 86,
+    "productName": "Bread - White Mini Epi",
+    "productCode": "13-200 - Storage Tanks",
+    "releaseDate": "8/29/2020",
+    "description": "Bread",
+    "price": 7,
+    "starRating": 4.5,
+    "imageUrl": "https://flavors.me/metus/aenean/fermentum/donec.jpg?integer=orci&a=luctus&nibh=et&in=ultrices&quis=posuere&justo=cubilia&maecenas=curae&rhoncus=nulla&aliquam=dapibus&lacus=dolor&morbi=vel&quis=est&tortor=donec&id=odio&nulla=justo&ultrices=sollicitudin&aliquet=ut&maecenas=suscipit&leo=a&odio=feugiat&condimentum=et&id=eros&luctus=vestibulum&nec=ac&molestie=est&sed=lacinia&justo=nisi&pellentesque=venenatis&viverra=tristique&pede=fusce&ac=congue&diam=diam"
+  }
 ]
 }
