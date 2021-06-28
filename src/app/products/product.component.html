@@ -49,8 +49,7 @@
                             <img [src]="prod.imageUrl" [style.width.px]="imageWidth" alt="image" *ngIf="shoWImage"/>
                         </td>
                         <td>
-                            <a [routerLink]="['/products',prod.productId]"
-                               [queryParams]="{name:prod.productName,img:prod.imageUrl,desc:prod.description}">
+                            <a [routerLink]="['/products',prod.productId]">
                                 {{prod.productName | myUpperText:'lower':'jilu'}}
                             </a>
                         </td>
@@ -74,3 +73,7 @@
         </ng-template>
     </div>
 </div>
+
+<!-- 
+[queryParams]="{name:prod.productName,img:prod.imageUrl,desc:prod.description}"
+-->
