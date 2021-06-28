@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
 @Injectable()
 
 export class ProductService {
-    private productUrl = 'https://ngproductsparam.herokuapp.com/api/getProductDetails';
+    private productUrl = 'http://localhost:8900/products';
+    //'https://ngproductsparam.herokuapp.com/api/getProductDetails';
 
     constructor(private http: HttpClient){}
 

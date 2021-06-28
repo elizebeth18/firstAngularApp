@@ -1,4 +1,5 @@
-[
+{
+    "products":[
 {
 "_id": "5a05db08734d1d68d42d3300",
 "productId": 3,
@@ -33,3 +34,4 @@
 "imageUrl": "https://i.ibb.co/HD3RHMW/videogame.jpg"
 }
 ]
+}

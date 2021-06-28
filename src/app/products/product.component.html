@@ -49,7 +49,7 @@
                             <img [src]="prod.imageUrl" [style.width.px]="imageWidth" alt="image" *ngIf="shoWImage"/>
                         </td>
                         <td>
-                            <a [routerLink]="['/products',prod.productId]">
+                            <a [routerLink]="['/product',prod.productId]">
                                 {{prod.productName | myUpperText:'lower':'jilu'}}
                             </a>
                         </td>
