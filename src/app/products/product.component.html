@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="table-responsive" >
-            <table class="table" *ngIf="products && products.length">
+            <table class="table" *ngIf="products && products.length; else noData">
                 <thead>
                     <tr>
                         <td>
@@ -48,7 +48,12 @@
                             <!-- Property or Attribute Binding -->
                             <img [src]="prod.imageUrl" [style.width.px]="imageWidth" alt="image" *ngIf="shoWImage"/>
                         </td>
-                        <td>{{prod.productName | myUpperText:'lower':'jilu'}}</td>
+                        <td>
+                            <a [routerLink]="['/products',prod.productId]"
+                               [queryParams]="{name:prod.productName,img:prod.imageUrl,desc:prod.description}">
+                                {{prod.productName | myUpperText:'lower':'jilu'}}
+                            </a>
+                        </td>
                         <td>{{prod.productCode | myUpperText:'upper':'ji'}}</td>
                         <td>{{prod.releaseDate | date}}</td>
                             <!-- Conditional CSS using ngStyle -->
@@ -64,5 +69,8 @@
                 </tbody>
             </table>
         </div>
+        <ng-template #noData>
+            <img src="../../assets/loading.gif.html" alt="">
+        </ng-template>
     </div>
 </div>

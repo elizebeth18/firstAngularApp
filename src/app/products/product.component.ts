@@ -17,7 +17,7 @@ import { ProductService } from './product.service';
 export class ProductComponent implements OnInit {
     title : string = "Product Filter";
     mainHeading : string = "*****Products Page*****";
-    userText : string = "User Input Text";
+    userText : string = ""; //User Input Text
     showTable : boolean = false;
     shoWImage : boolean = false;
     imageWidth : number = 100;
