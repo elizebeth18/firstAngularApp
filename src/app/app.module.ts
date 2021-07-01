@@ -28,6 +28,8 @@ import { OrdersComponent } from './orders/orders.component';
 import { NotFoundComponent } from './shared/notFound.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { MusicService } from './music/music.service';
+import { MusicModule } from './music/music.module';
+import { ProductModule } from './products/product.module';
 
 //decorator (metaData)
 @NgModule({
@@ -44,7 +46,9 @@ import { MusicService } from './music/music.service';
       {path: 'home', component: HomeComponent},
       {path: '',redirectTo: 'home',pathMatch: 'full'},
       {path: '**', component: NotFoundComponent}
-    ])
+    ]),
+    MusicModule,
+    ProductModule
   ],
 
   //All Components and Pipes will be declared here
